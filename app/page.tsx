@@ -52,7 +52,7 @@ const cartItems = Object.entries(cart)
   .filter(Boolean) as (typeof rollItems[number] & { quantity: number })[];
 
 const total = cartItems.reduce(
-  (acc, item) => acc + item.price * item.quantity,
+  (acc, item) => acc + Number(item.price) * item.quantity,
   0
 );
 
