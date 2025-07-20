@@ -1,17 +1,23 @@
 {
-  "name": "myata-roll",
+  "name": "myata-roll-2gk",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "next": "13.4.19",
+    "next": "13.4.7",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "framer-motion": "^10.16.4",
-    "lucide-react": "^0.316.0"
+    "framer-motion": "^10.12.16",
+    "lucide-react": "^0.269.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6",
+    "@types/react": "^18.2.14",
+    "@types/node": "^20.3.1"
   }
 }
