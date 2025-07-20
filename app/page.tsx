@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { rollItems, rollCategories } from "@/data/rollItems";
+import { rollItems, rollCategories } from "../../data/rollItems";
 import { ShoppingCart, Menu, Phone, Navigation, X } from "lucide-react";
 
 export default function RollPage() {
