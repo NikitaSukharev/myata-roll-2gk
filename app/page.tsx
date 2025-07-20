@@ -44,17 +44,17 @@ export default function RollPage() {
     (item) => item.category === selectedCategory
   );
 
-  const cartItems = Object.entries(cart)
-    .map(([id, qty]) => {
-      const item = rollItems.find((i) => i.id === Number(id));
-      return item ? { ...item, quantity: qty } : null;
-    })
-    .filter(Boolean) as ((typeof rollItems)[0] & { quantity: number })[];
+const cartItems = Object.entries(cart)
+  .map(([id, qty]) => {
+    const item = rollItems.find((i) => i.id === Number(id));
+    return item ? { ...item, quantity: qty } : null;
+  })
+  .filter(Boolean) as (typeof rollItems[number] & { quantity: number })[];
 
-  const total = cartItems.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
-  );
+const total = cartItems.reduce(
+  (acc, item) => acc + item.price * item.quantity,
+  0
+);
 
   const handleSendOrder = () => {
     if (!name || !phone) return alert("Введите имя и номер телефона");
