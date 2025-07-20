@@ -155,6 +155,7 @@ ${lines.join("\n")}
               transition={{ duration: 0.4 }}
               viewport={{ once: true }}
               className="bg-white border border-[#e8dfd3] rounded-xl p-4 text-center shadow"
+              {...({} as React.HTMLAttributes<HTMLDivElement>)}
             >
               <img
                 loading="lazy"
