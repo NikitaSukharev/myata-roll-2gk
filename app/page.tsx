@@ -56,12 +56,12 @@ const total = cartItems.reduce(
   0
 );
 
-  const handleSendOrder = () => {
-    if (!name || !phone) return alert("Введите имя и номер телефона");
-    const lines = cartItems.map(
-      (i) => `• ${i.title} × ${i.quantity} = ${i.price * i.quantity} ₽`
-    );
-    const msg = `🏩 Новый заказ:
+const handleSendOrder = () => {
+  if (!name || !phone) return alert("Введите имя и номер телефона");
+  const lines = cartItems.map(
+    (i) => `• ${i.title} × ${i.quantity} = ${Number(i.price) * i.quantity} ₽`
+  );
+  const msg = `🏩 Новый заказ:
 Имя: ${name}
 Телефон: ${phone}
 Тип: ${deliveryType === "pickup" ? "Самовывоз" : "Доставка"}
@@ -72,13 +72,14 @@ ${lines.join("\n")}
 
 ИТОГО: ${total} ₽`;
 
-    const whatsappNumber = "+79180220228";
-    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      msg
-    )}`;
-    window.open(url, "_blank");
-    setShowOrderModal(false);
-  };
+  const whatsappNumber = "+79180220228";
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    msg
+  )}`;
+  window.open(url, "_blank");
+  setShowOrderModal(false);
+};
+
 
   return (
     <div className="bg-[#fdfaf5] text-[#1a1a1a] min-h-screen pb-28">
