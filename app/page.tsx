@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import type { HTMLMotionProps } from "framer-motion";
 import { rollItems, rollCategories } from "../data/rollItems";
 import { ShoppingCart, Menu, Phone, Navigation, X } from "lucide-react";
 
@@ -156,7 +155,6 @@ ${lines.join("\n")}
               transition={{ duration: 0.4 }}
               viewport={{ once: true }}
               className="bg-white border border-[#e8dfd3] rounded-xl p-4 text-center shadow"
-              {...( {} as HTMLMotionProps<"div"> )}
             >
               <img
                 loading="lazy"
