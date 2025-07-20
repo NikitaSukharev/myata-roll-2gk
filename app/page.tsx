@@ -59,7 +59,7 @@ export default function RollPage() {
   const handleSendOrder = () => {
     if (!name || !phone) return alert("Введите имя и номер телефона");
     const lines = cartItems.map(
-      (i) => `• ${i.title} × ${i.quantity} = ${item.price * i.quantity} ₽`
+      (i) => `• ${i.title} × ${i.quantity} = ${i.price * i.quantity} ₽`
     );
     const msg = `🏩 Новый заказ:
 Имя: ${name}
