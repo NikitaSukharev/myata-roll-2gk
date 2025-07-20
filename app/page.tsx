@@ -154,8 +154,9 @@ ${lines.join("\n")}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4 }}
               viewport={{ once: true }}
-              className="bg-white border border-[#e8dfd3] rounded-xl p-4 text-center shadow"
+              {...{ className: "bg-white border border-[#e8dfd3] rounded-xl p-4 text-center shadow" }}
             >
+
               <img
                 loading="lazy"
                 src={item.image}
